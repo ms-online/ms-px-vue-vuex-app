@@ -1,5 +1,5 @@
 # vue-app
 
-## lesson2
+## lesson3
 
-创建项目
+data 和组件属性传值
