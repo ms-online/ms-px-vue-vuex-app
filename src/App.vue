@@ -16,17 +16,17 @@ export default {
         {
           id: 1,
           title: "待办事项1",
-          completed: false
+          complete: false
         },
         {
           id: 2,
           title: "待办事项2",
-          completed: false
+          complete: false
         },
         {
           id: 3,
           title: "待办事项3",
-          completed: false
+          complete: false
         }
       ]
     }

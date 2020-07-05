@@ -1,5 +1,5 @@
 # vue-app
 
-## lesson3
+## lesson4
 
-data 和组件属性传值
+样式绑定 抽离组件
