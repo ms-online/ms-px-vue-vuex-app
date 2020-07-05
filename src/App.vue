@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <div v-bind:key="todo.id" v-for="todo in todos">{{todo.id}} - {{todo.title}}</div> -->
-    <Todos :todos="todos" />
+    <Todos :todos="todos" @handleItem="handleItem" />
   </div>
 </template>
 
@@ -33,6 +33,12 @@ export default {
   },
   components: {
     Todos
+  },
+  methods: {
+    handleItem(id) {
+      // console.log(id);
+      this.todos = this.todos.filter(todo => todo.id != id)
+    }
   }
 }
 </script>

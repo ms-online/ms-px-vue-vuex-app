@@ -1,7 +1,7 @@
 <template>
   <div>
     <div :key="todo.id" v-for="todo in todos">
-      <Todo :todo="todo"></Todo>
+      <Todo :todo="todo" @delItem="$emit('handleItem',todo.id)"></Todo>
     </div>
   </div>
 </template>
@@ -17,6 +17,11 @@ export default {
   },
   components: {
     Todo
+  },
+  methods: {
+    // delItem(id) {
+    //   console.log(id)
+    // }
   }
 
 }

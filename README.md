@@ -1,5 +1,5 @@
 # vue-app
 
-## lesson4
+## lesson5
 
-样式绑定 抽离组件
+注册事件实现删除

@@ -3,6 +3,7 @@
     <p>
       <input type="checkbox" @change="markComplate" />
       {{todo.title}}
+      <button class="del" @click="$emit('delItem',todo.id)">x</button>
     </p>
   </div>
 </template>
@@ -39,5 +40,8 @@ export default {
   border-radius: 50%;
   cursor: pointer;
   float: right;
+}
+.del:focus {
+  outline: none;
 }
 </style>
