@@ -2,6 +2,8 @@
   <div id="app">
     <!-- Header -->
     <Header />
+    <!-- AddTodo -->
+    <AddTodo @handleAdd="handleAdd" />
     <!-- <div v-bind:key="todo.id" v-for="todo in todos">{{todo.id}} - {{todo.title}}</div> -->
     <Todos :todos="todos" @handleItem="handleItem" />
   </div>
@@ -9,6 +11,7 @@
 
 <script>
 import Header from './components/layout/Header.vue';
+import AddTodo from './components/AddTodo.vue';
 import Todos from "./components/Todos.vue"
 export default {
   name: 'app',
@@ -36,12 +39,17 @@ export default {
   },
   components: {
     Todos,
-    Header
+    Header,
+    AddTodo
   },
   methods: {
     handleItem(id) {
       // console.log(id);
       this.todos = this.todos.filter(todo => todo.id != id)
+    },
+    handleAdd(newTodo) {
+      // this.todos.unshift(newTodo);
+      this.todos = [...this.todos, newTodo]
     }
   }
 }
@@ -57,5 +65,16 @@ export default {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
+}
+.btn {
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  padding: 7px 20px;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
 }
 </style>
