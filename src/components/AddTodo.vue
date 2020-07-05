@@ -11,7 +11,7 @@
 </template>
 
 <script>
-const uuid = require('uuid');
+// const uuid = require('uuid');
 export default {
   name: 'AddTodo',
   data() {
@@ -25,11 +25,11 @@ export default {
       //   console.log(this.title)
       //   创建任务对象
       const newTodo = {
-        id: uuid.v4(),
+        // id: uuid.v4(),
         title: this.title,
         complete: false,
       };
-      console.log(newTodo);
+      //   console.log(newTodo);
       this.$emit('handleAdd', newTodo);
       this.title = '';
     },
