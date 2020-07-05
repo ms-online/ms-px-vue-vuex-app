@@ -1,5 +1,5 @@
 # vue-app
 
-## lesson5
+## lesson6
 
-注册事件实现删除
+头部组件

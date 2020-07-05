@@ -1,11 +1,14 @@
 <template>
   <div id="app">
+    <!-- Header -->
+    <Header />
     <!-- <div v-bind:key="todo.id" v-for="todo in todos">{{todo.id}} - {{todo.title}}</div> -->
     <Todos :todos="todos" @handleItem="handleItem" />
   </div>
 </template>
 
 <script>
+import Header from './components/layout/Header.vue';
 import Todos from "./components/Todos.vue"
 export default {
   name: 'app',
@@ -32,7 +35,8 @@ export default {
     }
   },
   components: {
-    Todos
+    Todos,
+    Header
   },
   methods: {
     handleItem(id) {
